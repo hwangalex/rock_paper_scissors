@@ -6,16 +6,17 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     let result = "error";
+    let player = playerSelection.toLowerCase();
 
-    if ((playerSelection == "Rock" && computerSelection == "Scissors") ||
-    (playerSelection == "Paper" && computerSelection == "Rock") ||
-    (playerSelection == "Scissors" && computerSelection == "Paper")) {
+    if ((player == "rock" && computerSelection == "Scissors") ||
+    (player == "paper" && computerSelection == "Rock") ||
+    (player == "scissors" && computerSelection == "Paper")) {
         result = "You Win!"
-    } else if ((playerSelection == "Rock" && computerSelection == "Paper") ||
-    (playerSelection == "Paper" && computerSelection == "Scissors") ||
-    (playerSelection == "Scissors" && computerSelection == "Rock")) {
+    } else if ((player == "rock" && computerSelection == "Paper") ||
+    (player == "paper" && computerSelection == "Scissors") ||
+    (player == "scissors" && computerSelection == "Rock")) {
         result = "You Lose!"
-    } else if (playerSelection == computerSelection) {
+    } else if (player == computerSelection.toLowerCase()) {
         result = "Tie Game!"
     } else {
         return result;
@@ -25,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-const playerSelection = "Rock";
+const playerSelection = "pApeR";
 const computerSelection = getComputerChoice();
 console.log("player = " + playerSelection);
 console.log("computer = " + computerSelection);
