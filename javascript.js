@@ -68,5 +68,4 @@ function game() {
 
 console.log(game());
 
-// ERROR: the computer selection is the always the same -> run getComputerChoice() inside the playRound() function
-// ERROR: the player selection is the always the same -> FIX: use prompt() inside the game() function
+
